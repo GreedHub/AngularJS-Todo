@@ -1,0 +1,64 @@
+/*-----------------VARIABLES------------------------*/
+:root{
+ --color-header:#F0F0F0;
+ --color-content: #FFFFFF;
+}
+/*--------FUENTE Y CODIFICACION------------*/
+@charset "UTF-8";
+/* CSS Document */
+/* @font-face {
+font-family: 'LatoRegular';
+ src: url('css/Lato-Regular.ttf') format('truetype');
+ font-weight: normal;
+ font-style: normal;
+}
+ @font-face {
+font-family: 'LatoMedium';
+ src: url('css/Lato-Medium.ttf') format('truetype');
+ font-weight: normal;
+ font-style: normal;
+}
+@font-face {
+font-family: 'LatoBold';
+ src: url('css/Lato-Bold.ttf') format('truetype');
+ font-weight: normal;
+ font-style: normal;
+}
+@font-face {
+font-family: 'LatoBlack';
+ src: url('css/Lato-Black.ttf') format('truetype');
+ font-weight: normal;
+ font-style: normal;
+}
+@font-face {
+font-family: 'LatoLight';
+ src: url('css/Lato-Light.ttf') format('truetype');
+ font-weight: normal;
+ font-style: normal;
+}
+@font-face {
+font-family: 'LatoItalic';
+ src: url('css/Lato-Italic.ttf') format('truetype');
+ font-weight: normal;
+ font-style: normal;
+} */
+/*-----------------SCROLLBAR------------------------*/
+::-webkit-scrollbar {
+	width: 7px;
+}
+
+::-webkit-scrollbar-track {
+	
+	background-color: rgba(47, 54, 64,0.4);
+	position: relative;
+}
+ 
+::-webkit-scrollbar-thumb {
+	background: rgba(47, 54, 64,0.9); 
+	border-radius: 7px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: rgba(47, 54, 64,1); 
+}

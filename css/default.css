@@ -1,0 +1,108 @@
+:root {
+  margin: none;
+  padding: none;
+}
+
+body {
+  background-color: #5E35B1;
+}
+
+.grid-container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 80px 1fr;
+  grid-template-areas: "title" "content";
+}
+
+.grid-header {
+  grid-area: title;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.grid-header h2 {
+  color: #fff;
+  text-align: center;
+  font-size: 1.8em;
+}
+
+.grid-body {
+  grid-area: content;
+  border-radius: 25px 25px 0px 0px;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 50px 50px;
+  grid-template-areas: "todo-list" "add-todo" "nav";
+}
+
+.todo {
+  grid-area: todo-list;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 20px;
+}
+.todo__item {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 5px 0px;
+}
+.todo__check {
+  border: solid 2px #D81B60;
+  border-radius: 5px;
+  background-color: white;
+  width: 2em;
+  height: 2em;
+}
+.todo__check.checked {
+  background-color: #D81B60;
+}
+.todo__content {
+  line-height: 20px;
+}
+.todo__title {
+  font-size: 1.5em;
+  font-weight: medium;
+}
+.todo__description {
+  color: #999;
+}
+
+.add-todo {
+  grid-area: add-todo;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border: solid 1px #5E35B1;
+  border-width: 1px 0px 1px 0px;
+}
+.add-todo__title {
+  border: solid 1px #D81B60;
+  border-radius: 5px;
+}
+.add-todo__submit {
+  display: none;
+}
+.add-todo label[for=submit] {
+  color: #D81B60;
+  font-size: 2em;
+}
+
+.grid-body > nav {
+  grid-area: nav;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.grid-body > nav a {
+  font-size: 2em;
+}
+.grid-body > nav a.active {
+  color: #5E35B1;
+}
+
+/*# sourceMappingURL=default.css.map */

@@ -1,0 +1,127 @@
+@import './globals.scss';
+
+:root{
+    margin: none;
+    padding: none;
+}
+
+body{
+    background-color: color(primary);
+}
+
+.grid-container{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px 1fr;
+    grid-template-areas: "title"
+                         "content";
+}
+
+.grid-header{
+    grid-area: title;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    h2{
+        color:color(white);
+        text-align: center;
+        font-size: 1.8em;
+    }
+}
+
+.grid-body{
+    grid-area: content;
+    border-radius: 25px 25px 0px 0px;
+    background-color: color(white);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 50px 50px;
+    grid-template-areas: "todo-list"
+                         "add-todo"
+                         "nav";                        
+}
+
+.todo{
+    grid-area:todo-list;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch ;
+    padding: 20px;    
+
+    &__item{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding:5px 0px;
+    }
+
+    &__check{
+        border:solid 2px color(secondary);
+        border-radius: 5px;
+        background-color: white;
+        width: 2em;
+        height: 2em;
+    
+        &.checked{
+            background-color: color(secondary);
+        }
+    }
+
+    &__content{
+        line-height: 20px;
+    }
+
+    &__title{
+        font-size: 1.5em;
+        font-weight: medium;
+        color:color(dark-grey);
+    }
+
+    &__description{
+        color:color(medium-gray);
+    }
+
+
+}
+
+.add-todo{
+    grid-area:add-todo;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: solid 1px color(primary);
+    border-width: 1px 0px 1px 0px;
+
+    &__title{
+        border:solid 1px color(secondary);
+        border-radius: 5px;
+    }
+
+    &__submit{
+        display: none;
+    }
+
+    label[for=submit]{
+        color:color(secondary);
+        font-size: 2em;
+    }
+}
+
+.grid-body > nav{
+    grid-area:nav;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    
+    a{
+        color:color(dark-grey);
+        font-size: 2em;
+    }
+
+    a.active{
+        color:color(primary)
+    }
+}
