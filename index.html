@@ -42,24 +42,24 @@
       <div class="todo__item" ng-repeat="todo in vm.todos" >
         <div class="todo__check" ng-click="vm.checkTodo(todo.id)" ng-class="{checked:todo.checked}"></div>
         <div class="todo__content">
-          <p class="todo__title" ng-bind="todo.title" ></p>
-          <p class="todo__description" ng-bind="todo.description" ></p>
+          <p class="todo__title" ng-class="{checked:todo.checked}" ng-bind="todo.title" ></p>
+          <p class="todo__description" ng-class="{checked:todo.checked}" ng-bind="todo.description" ></p>
         </div>
-        <button class="todo__remove" ng-click="vm.removeTodo(todo.id)"><i class="fas fa-pen"></i></button>
+        <button class="todo__edit" ng-click="vm.removeTodo(todo.id)"><i class="fas fa-pen"></i></button>
       </div>
       
     </div>
 
     <form class="add-todo" ng-submit="vm.addTodo()">
-      <input type="text" class="add-todo__title" ng-model="vm.newTodoItem.title">
+      <input type="text" class="add-todo__title" ng-model="vm.newTodoItem.title" placeholder="New task">
       <label for="submit"><i class="fas fa-plus-circle"></i></label>
       <input type="submit" id="submit" class="add-todo__submit">
     </form>
 
     <nav>
-      <a><i class="fas fa-check-square"></i></a>
-      <a><i class="far fa-calendar"></i></a>
-      <a><i class="fas fa-cog"></i></a>
+      <a class="active"><i class="fas fa-check-square"></i></a>
+      <a class="active"><i class="far fa-calendar"></i></a>
+      <a class="active"><i class="fas fa-cog"></i></a>
     </nav>
   </div>
 

@@ -5,6 +5,9 @@ myApp.controller('appCtrl', function ($scope, $http, $filter, $uibModal, $sce, $
 
   vm.initialState = () => {
 
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+
     vm.newTodoItem = {
       title:'',
       description:''
@@ -112,3 +115,7 @@ myApp.filter('reverse', function() {
 
 
 
+window.addEventListener('resize', () => {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+});
