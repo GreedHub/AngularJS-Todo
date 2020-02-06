@@ -15,9 +15,10 @@ body{
     height: calc(var(--vh, 1vh) * 100);
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 80px 1fr;
+    grid-template-rows: 80px 1fr 60px;
     grid-template-areas: "title"
-                         "content";
+                         "content"
+                         "nav";
 }
 
 .grid-header{
@@ -39,10 +40,9 @@ body{
     background-color: color(white);
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 50px 50px;
+    grid-template-rows: 1fr 60px;
     grid-template-areas: "todo-list"
-                         "add-todo"
-                         "nav";                        
+                         "add-todo";                      
 }
 
 .todo{
@@ -122,8 +122,10 @@ body{
         border:solid 1px color(primary);
         border-radius: 50px;
         padding: 0px 20px;
-        height: 2em;
+        height: 2.3em;
         outline: none;
+        width: 85%;
+        color: color(strong-gray);
     }
     
     &__title::placeholder{
@@ -143,7 +145,8 @@ body{
     }
 }
 
-.grid-body > nav{
+ nav{
+     background-color: color(white);
     grid-area:nav;
     display: flex;
     justify-content: space-between;
